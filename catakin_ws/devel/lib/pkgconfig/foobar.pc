@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/catakin_ws/devel
+
+Name: foobar
+Description: Description of foobar
+Version: 1.2.4
+Cflags: 
+Libs: -L/home/mypc/ROSex/catakin_ws/devel/lib 
+Requires: 

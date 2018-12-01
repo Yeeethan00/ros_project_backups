@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/mybot_ws/install
+
+Name: my_sensor
+Description: Description of my_sensor
+Version: 0.0.0
+Cflags: -I/home/mypc/ROSex/mybot_ws/install/include
+Libs: -L/home/mypc/ROSex/mybot_ws/install/lib 
+Requires: geometry_msgs rospy std_msgs message_runtime actionlib_msgs

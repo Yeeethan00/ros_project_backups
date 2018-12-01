@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: yrobot_home_bringup
+    relative_path: urdf/yrobot_arm_base.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/arm.srdf
+  CONFIG:
+    author_name: YEE
+    author_email: yirj0809@gmail.com
+    generated_timestamp: 1538563302

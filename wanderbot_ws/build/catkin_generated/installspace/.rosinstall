@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mypc/ROSex/wanderbot_ws/install/setup.sh

@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/stockroombot_ws/devel
+
+Name: stockroom_bot
+Description: Description of stockroom_bot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/stockroombot_ws/devel/lib 
+Requires: 

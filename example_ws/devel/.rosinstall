@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mypc/ROSex/example_ws/devel/setup.sh

@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/mybot_ws/devel
+
+Name: my_tortoisebot
+Description: Description of my_tortoisebot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/mybot_ws/devel/lib 
+Requires: 

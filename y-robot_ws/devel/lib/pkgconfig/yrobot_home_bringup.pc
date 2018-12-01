@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/y-robot_ws/devel
+
+Name: yrobot_home_bringup
+Description: Description of yrobot_home_bringup
+Version: 0.0.0
+Cflags: -I/home/mypc/ROSex/y-robot_ws/devel/include
+Libs: -L/home/mypc/ROSex/y-robot_ws/devel/lib 
+Requires: actionlib_msgs

@@ -1,0 +1,20 @@
+rate: 100
+sync_write: True
+sync_read: False
+read_rate: 10
+write_rate: 10
+
+joints: {
+     shouder_arm_joint: {id: 5, neutral: 512, min_angle: -90, max_angle: 90},
+     upper_arm_joint: {id: 4, neutral: 512, min_angle: -90, max_angle: 90},
+     middle_arm_joint: {id: 3, neutral: 512, min_angle: -90, max_angle: 90},
+     fore_arm_joint: {id: 2, neutral: 512, min_angle: -90, max_angle: 90},
+     tool_joint: {id: 1, neutral: 512, min_angle: -90, max_angle: 90}
+}
+
+controllers: {
+ 
+   yrobot_arm_controller: {onboard: True, action_name: yrobot_arm_controller/follow_joint_trajectory, type: follow_controller, joints: [ shouder_arm_joint, upper_arm_joint, middle_arm_joint,fore_arm_joint,tool_joint]}
+
+}
+

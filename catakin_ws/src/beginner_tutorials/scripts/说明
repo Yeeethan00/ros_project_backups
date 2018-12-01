@@ -1,0 +1,16 @@
+talker.py  listener.py  add_two_ints_client.py  add_two_ints_server.py
+以上四个为https://www.ncnynl.com/category/ros-junior-tutorial/中例程
+----------------------------------------------------------------------
+书中例程:
+第一部分：
+第3章 话题：
+	topic_publisher.py	topic_subscriber.py
+	message_publisher.py	message_subscriber.py
+	doubler.py
+第4章 服务：
+	service_server.py	service_client.py
+第5章 行动：
+	simple_action_server.py		simple_action_client.py
+	fancy_action_server.py		fancy_action_client.py
+第19章 声音：
+	pyttsx_server.py	pyttsx_client.py

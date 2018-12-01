@@ -1,0 +1,2 @@
+wpb_home_behaviors:wpb_home_bringup:wpb_home_remote:wpb_home_tutorials:wpbh_local_planner
+-DCATKIN_DEVEL_PREFIX=/home/mypc/ROSex/wpd_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mypc/ROSex/wpd_ws/install -G Unix Makefiles

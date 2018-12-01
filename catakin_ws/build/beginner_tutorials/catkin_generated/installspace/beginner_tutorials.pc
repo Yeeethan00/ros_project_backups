@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/catakin_ws/install
+
+Name: beginner_tutorials
+Description: Description of beginner_tutorials
+Version: 0.0.0
+Cflags: -I/home/mypc/ROSex/catakin_ws/install/include
+Libs: -L/home/mypc/ROSex/catakin_ws/install/lib -lbeginner_tutorials
+Requires: roscpp rospy std_msgs message_runtime actionlib_msgs

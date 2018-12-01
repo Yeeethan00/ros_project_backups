@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/chessbot/devel
+
+Name: chessbot_r2
+Description: Description of chessbot_r2
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/chessbot/devel/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/y-robot_ws/devel
+
+Name: riki_msgs
+Description: Description of riki_msgs
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/y-robot_ws/devel/lib 
+Requires: 

@@ -1,0 +1,8 @@
+left_back_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - left_back_shoulder_joint
+    - left_back_3_joint
+    - left_back_2_joint
+    - left_back_1_joint
+

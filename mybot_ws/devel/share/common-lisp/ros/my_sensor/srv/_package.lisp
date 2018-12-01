@@ -1,0 +1,15 @@
+(cl:defpackage my_sensor-srv
+  (:use )
+  (:export
+   "FAKESENSOR"
+   "<FAKESENSOR-REQUEST>"
+   "FAKESENSOR-REQUEST"
+   "<FAKESENSOR-RESPONSE>"
+   "FAKESENSOR-RESPONSE"
+   "LIGHT"
+   "<LIGHT-REQUEST>"
+   "LIGHT-REQUEST"
+   "<LIGHT-RESPONSE>"
+   "LIGHT-RESPONSE"
+  ))
+

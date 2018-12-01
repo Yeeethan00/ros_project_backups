@@ -1,0 +1,2 @@
+set(rgbdslam_MESSAGE_FILES "")
+set(rgbdslam_SERVICE_FILES "/home/mypc/ROSex/y-robot_ws/src/yrobot_drivers_bringup/rgbdslam_v2-kinetic/srv/rgbdslam_ros_ui.srv;/home/mypc/ROSex/y-robot_ws/src/yrobot_drivers_bringup/rgbdslam_v2-kinetic/srv/rgbdslam_ros_ui_b.srv;/home/mypc/ROSex/y-robot_ws/src/yrobot_drivers_bringup/rgbdslam_v2-kinetic/srv/rgbdslam_ros_ui_f.srv;/home/mypc/ROSex/y-robot_ws/src/yrobot_drivers_bringup/rgbdslam_v2-kinetic/srv/rgbdslam_ros_ui_s.srv")

@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/mybot_ws/devel
+
+Name: robocon2019
+Description: Description of robocon2019
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/mybot_ws/devel/lib 
+Requires: actionlib_msgs

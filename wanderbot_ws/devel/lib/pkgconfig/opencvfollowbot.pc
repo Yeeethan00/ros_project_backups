@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/wanderbot_ws/devel
+
+Name: opencvfollowbot
+Description: Description of opencvfollowbot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/wanderbot_ws/devel/lib 
+Requires: 

@@ -1,0 +1,2 @@
+cougarbot_moveit_config:handbase:my_actuator:my_cougarbot:my_sensor:my_tortoisebot:robocon2019:urg_node
+-DCATKIN_DEVEL_PREFIX=/home/mypc/ROSex/mybot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mypc/ROSex/mybot_ws/install -G Unix Makefiles

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="world" default="empty"/> 
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--arg name="world_name" value="$(find neurobot_gazebo)/worlds/neurobot.world"/-->
+    <arg name="world_name" value="$(find robocon2019)/world/ROBOCON2019_red.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find robocon2019)/model/text_house_with_kinect.urdf.xacro'"/>
+
+  <node name="test_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -param robot_description -model test_house -x 0.2 -y -0.1 -roll 0 -pitch 0 -yaw 0" />
+  
+  <rosparam file="$(find robocon2019)/config/text_house_left_front_controllers.yaml" command="load"/>
+  <node name="left_front_controller_spawner" pkg="controller_manager" type="spawner" args="left_front_controller"/>
+ 
+  <rosparam file="$(find robocon2019)/config/text_house_right_front_controllers.yaml" command="load"/>
+  <node name="right_front_controller_spawner" pkg="controller_manager" type="spawner" args="right_front_controller"/>
+
+  <rosparam file="$(find robocon2019)/config/text_house_left_back_controllers.yaml" command="load"/>
+  <node name="left_back_controller_spawner" pkg="controller_manager" type="spawner" args="left_back_controller"/>
+
+  <rosparam file="$(find robocon2019)/config/text_house_right_back_controllers.yaml" command="load"/>
+  <node name="right_back_controller_spawner" pkg="controller_manager" type="spawner" args="right_back_controller"/>
+  <!-- Convert /joint_states messages published by Gazebo to /tf messages,
+       e.g., for rviz-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher"
+        type="robot_state_publisher"/>
+
+  <node name="init_test_house_pose" pkg="robocon2019" type="init_test_house_pose.py"/>
+
+  <!--node name="MR2_scan2point" pkg="robocon2019" type="MR2_scan2point"/-->
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/chessbot/devel
+
+Name: r2_fullbody_moveit_config
+Description: Description of r2_fullbody_moveit_config
+Version: 0.2.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/chessbot/devel/lib 
+Requires: 

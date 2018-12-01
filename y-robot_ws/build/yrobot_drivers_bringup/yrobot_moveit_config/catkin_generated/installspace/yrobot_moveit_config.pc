@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/y-robot_ws/install
+
+Name: yrobot_moveit_config
+Description: Description of yrobot_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/y-robot_ws/install/lib 
+Requires: 

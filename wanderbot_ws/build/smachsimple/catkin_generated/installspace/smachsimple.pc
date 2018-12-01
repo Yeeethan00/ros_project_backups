@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/wanderbot_ws/install
+
+Name: smachsimple
+Description: Description of smachsimple
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/wanderbot_ws/install/lib 
+Requires: 

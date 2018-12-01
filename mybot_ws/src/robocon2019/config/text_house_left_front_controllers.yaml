@@ -1,0 +1,7 @@
+left_front_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - left_front_shoulder_joint
+    - left_front_3_joint
+    - left_front_2_joint
+    - left_front_1_joint

@@ -1,0 +1,13 @@
+# Target labels
+ siftgpu_proj
+# Source files and their labels
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/CMakeFiles/siftgpu_proj
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/CMakeFiles/siftgpu_proj.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/CMakeFiles/siftgpu_proj-complete.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/siftgpu_prefix/src/siftgpu_proj-stamp/siftgpu_proj-install.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/siftgpu_prefix/src/siftgpu_proj-stamp/siftgpu_proj-mkdir.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/siftgpu_prefix/src/siftgpu_proj-stamp/siftgpu_proj-download.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/siftgpu_prefix/src/siftgpu_proj-stamp/siftgpu_proj-update.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/siftgpu_prefix/src/siftgpu_proj-stamp/siftgpu_proj-patch.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/siftgpu_prefix/src/siftgpu_proj-stamp/siftgpu_proj-configure.rule
+/home/mypc/ROSex/y-robot_ws/build/yrobot_drivers_bringup/rgbdslam_v2-kinetic/external/siftgpu_prefix/src/siftgpu_proj-stamp/siftgpu_proj-build.rule

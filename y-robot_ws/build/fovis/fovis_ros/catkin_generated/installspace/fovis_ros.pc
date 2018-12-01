@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/y-robot_ws/install
+
+Name: fovis_ros
+Description: Description of fovis_ros
+Version: 0.0.1
+Cflags: -I/home/mypc/ROSex/y-robot_ws/install/include
+Libs: -L/home/mypc/ROSex/y-robot_ws/install/lib 
+Requires: message_runtime

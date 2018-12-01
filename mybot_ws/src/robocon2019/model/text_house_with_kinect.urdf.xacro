@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<robot name="text_house_with_kinect" xmlns:xacro="http://ros.org/wiki/xacro">
+     
+   <property name="camera_offset_x" value="0.44" />
+   <property name="camera_offset_y" value="0.0" />
+   <property name="camera_offset_z" value="0.45" />
+
+   <!-- include all component files -->
+   <xacro:include filename="$(find robocon2019)/model/text_house.urdf.xacro" />
+   <xacro:include filename="$(find robocon2019)/model/kinect_box.urdf.xacro" />
+   
+   <!-- Add the base and wheels -->
+   <base name="trunk_front"/>
+   
+   <!-- Attach the camera -->
+   <camera name="camera" parent="trunk_front" color="Black">
+      <origin xyz="${camera_offset_x} ${camera_offset_y} ${camera_offset_z}" rpy="0 0 0" />
+   </camera>
+
+</robot>
+
+

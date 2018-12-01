@@ -1,0 +1,4 @@
+实现键盘'w''a''d''x''s'控制robot运动和停止
+keys_to_twist_using_rate.py是keys_to_twist.py的升级,增加稳定频率发布信息
+keys_to_twist_parameterized.py是keys_to_twist_using_rate.py的升级，增加可变速度
+keys_to_twist_with_ramps.py是keys_to_twist_parameterized.py的升级，增加斜坡环境，限制瞬时加速度

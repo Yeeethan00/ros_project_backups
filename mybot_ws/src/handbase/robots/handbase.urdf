@@ -1,0 +1,987 @@
+<?xml version="1.0"?>
+<robot
+  name="handbase">
+<link name="world"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000799962641470192 -0.000504081590186804 0.0401253166777664"
+        rpy="0 0 0" />
+      <mass
+        value="0.0146454969908164" />
+      <inertia
+        ixx="9.82327156254974E-06"
+        ixy="-3.59727314482683E-09"
+        ixz="-1.5220107553225E-07"
+        iyy="1.01860202299042E-05"
+        iyz="-1.82119548587631E-07"
+        izz="1.31533761566139E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.72156862745098 0.835294117647059 0.886274509803922 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+<joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+  <link
+    name="hands">
+    <inertial>
+      <origin
+        xyz="0.000309917534445799 0.017422524571406 0.000982941479633531"
+        rpy="0 0 0" />
+      <mass
+        value="0.00691356184373185" />
+      <inertia
+        ixx="1.11404015320748E-06"
+        ixy="-1.13700860874004E-07"
+        ixz="-3.76181638218656E-08"
+        iyy="8.08911806454596E-07"
+        iyz="1.9480037239203E-08"
+        izz="1.69003337579249E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/hands.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/hands.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint"
+    type="fixed">
+    <origin
+      xyz="0.002 -0.00099904 0.084029"
+      rpy="1.6145 5.6601E-16 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="hands" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="m1">
+    <inertial>
+      <origin
+        xyz="-5.8649379198571E-05 0.00710322420830823 -0.000919011788690298"
+        rpy="0 0 0" />
+      <mass
+        value="0.000401149327121621" />
+      <inertia
+        ixx="1.38181722725387E-08"
+        ixy="-8.52877610530251E-13"
+        ixz="4.50588118753344E-13"
+        iyy="5.34690774735833E-09"
+        iyz="-6.7374976271703E-11"
+        izz="1.3811414123899E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/m1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/m1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jm1"
+    type="continuous">
+    <origin
+      xyz="-0.019909 0.020595 0.0035827"
+      rpy="0.91749 0.63297 0.86037" />
+    <parent
+      link="hands" />
+    <child
+      link="m1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="m2">
+    <inertial>
+      <origin
+        xyz="5.65195456901108E-05 0.00724839701452454 0.000909121452704689"
+        rpy="0 0 0" />
+      <mass
+        value="0.000488960076655455" />
+      <inertia
+        ixx="1.98081450620883E-08"
+        ixy="7.08944885240524E-12"
+        ixz="1.12344077789193E-12"
+        iyy="4.94640906822664E-09"
+        iyz="-1.66466340140086E-09"
+        izz="2.0130741521641E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/m2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/m2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jm2"
+    type="continuous">
+    <origin
+      xyz="0 0.015246188580954 0"
+      rpy="2.89378326977912 -1.55431223447522E-15 3.14159265358979" />
+    <parent
+      link="m1" />
+    <child
+      link="m2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="s1">
+    <inertial>
+      <origin
+        xyz="-0.00362250596121665 0.0103105939733346 -0.000777301539950842"
+        rpy="0 0 0" />
+      <mass
+        value="0.000413607709580733" />
+      <inertia
+        ixx="2.00324911029648E-08"
+        ixy="-3.85377080846493E-12"
+        ixz="-1.64298202120837E-13"
+        iyy="2.41142507211235E-09"
+        iyz="3.99727221892691E-10"
+        izz="1.99550742354363E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/s1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/s1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="js1"
+    type="continuous">
+    <origin
+      xyz="-0.0053763604724873 0.0381685968167444 -0.000686874956817977"
+      rpy="0.483425192479908 -4.36731432883031E-17 -4.41481972286045E-17" />
+    <parent
+      link="hands" />
+    <child
+      link="s1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="s2">
+    <inertial>
+      <origin
+        xyz="-0.00297718776118376 0.0081184352546796 -0.000587272485037836"
+        rpy="0 0 0" />
+      <mass
+        value="0.000228155468648981" />
+      <inertia
+        ixx="8.67740401526557E-09"
+        ixy="-1.1639609043462E-14"
+        ixz="-6.96799352603514E-15"
+        iyy="1.12692478231675E-09"
+        iyz="1.59911377176696E-10"
+        izz="8.65077493517443E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/s2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/s2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="js2"
+    type="continuous">
+    <origin
+      xyz="-0.000646446339594647 0.022 0"
+      rpy="-0.000904762343968677 8.52736256764881E-20 2.915228409034E-19" />
+    <parent
+      link="s1" />
+    <child
+      link="s2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="s3">
+    <inertial>
+      <origin
+        xyz="0.00261864800743888 0.00379639831504887 0.000602596184251541"
+        rpy="0 0 0" />
+      <mass
+        value="9.29888945554876E-05" />
+      <inertia
+        ixx="1.18543636074523E-09"
+        ixy="-1.42256924417356E-14"
+        ixz="2.34606451591953E-14"
+        iyy="2.8981751106321E-10"
+        iyz="-1.16002009740691E-10"
+        izz="1.18558313130353E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/s3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/s3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="js3"
+    type="continuous">
+    <origin
+      xyz="-0.000358440047254212 0.0188062198406883 3.84373911384919E-05"
+      rpy="2.99455017046234 -3.21973916394588E-16 -3.14159265358979" />
+    <parent
+      link="s2" />
+    <child
+      link="s3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="z1">
+    <inertial>
+      <origin
+        xyz="1.53713124234288E-06 0.00995104440103917 -0.00084627919259484"
+        rpy="0 0 0" />
+      <mass
+        value="0.000449445106103916" />
+      <inertia
+        ixx="2.4260381319338E-08"
+        ixy="-2.19991934607478E-12"
+        ixz="-1.80325350613195E-12"
+        iyy="3.65797225058715E-09"
+        iyz="3.28146380421941E-10"
+        izz="2.41457082087587E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/z1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/z1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jz1"
+    type="continuous">
+    <origin
+      xyz="0 0.039107929378446 0"
+      rpy="0.354275765157499 -4.14321254827933E-17 -1.53249805301545E-17" />
+    <parent
+      link="hands" />
+    <child
+      link="z1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="z2">
+    <inertial>
+      <origin
+        xyz="-1.73129656850314E-09 0.00980849552545076 -0.000574753656051509"
+        rpy="0 0 0" />
+      <mass
+        value="0.000277333093207588" />
+      <inertia
+        ixx="1.41839859979758E-08"
+        ixy="1.14762503460668E-14"
+        ixz="-4.2685353628227E-16"
+        iyy="1.55874812539304E-09"
+        iyz="2.92692430199662E-10"
+        izz="1.41236297639242E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/z2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/z2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jz2"
+    type="continuous">
+    <origin
+      xyz="0 0.0212461885809539 0"
+      rpy="0.303966404007952 -3.01505045140602E-17 -2.3315147154823E-17" />
+    <parent
+      link="z1" />
+    <child
+      link="z2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="z3">
+    <inertial>
+      <origin
+        xyz="-1.13803270570831E-07 0.00425191782457193 0.00062980021777824"
+        rpy="0 0 0" />
+      <mass
+        value="0.000129333254932012" />
+      <inertia
+        ixx="2.19652236283476E-09"
+        ixy="-8.23482450816564E-15"
+        ixz="5.13652505578956E-14"
+        iyy="5.03050156308885E-10"
+        iyz="-2.10981967817644E-10"
+        izz="2.18067890067006E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/z3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/z3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jz3"
+    type="continuous">
+    <origin
+      xyz="0 0.0213660868281401 3.84373911389464E-05"
+      rpy="2.9635858538662 -4.24471036603833E-16 -3.14159265358979" />
+    <parent
+      link="z2" />
+    <child
+      link="z3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="w1">
+    <inertial>
+      <origin
+        xyz="0.00457750005083639 0.0102749702814112 0.00068894333079733"
+        rpy="0 0 0" />
+      <mass
+        value="0.000413608128697599" />
+      <inertia
+        ixx="2.00325505379359E-08"
+        ixy="-3.8702603924245E-12"
+        ixz="-1.68757070087102E-13"
+        iyy="2.41140340334988E-09"
+        iyz="3.99712927416352E-10"
+        izz="1.9955149691033E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/w1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/w1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jw1"
+    type="continuous">
+    <origin
+      xyz="0.0046236395275127 0.0381685968167444 -0.000686874956817977"
+      rpy="0.286350303367985 -4.10172514557506E-17 1.19652995252588E-17" />
+    <parent
+      link="hands" />
+    <child
+      link="w1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="w2">
+    <inertial>
+      <origin
+        xyz="0.00297719836900487 0.00811843492934312 -0.000587272330918688"
+        rpy="0 0 0" />
+      <mass
+        value="0.000228155624371926" />
+      <inertia
+        ixx="8.67740916932328E-09"
+        ixy="-1.11787036470917E-14"
+        ixz="-7.05853179712802E-15"
+        iyy="1.12692799432082E-09"
+        iyz="1.59911691093618E-10"
+        izz="8.65077908229553E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/w2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/w2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jw2"
+    type="continuous">
+    <origin
+      xyz="0.00159916728456922 0.0219643442428143 0.00146624561542037"
+      rpy="0.294406510076238 -4.24938625139124E-17 -5.0750357200336E-18" />
+    <parent
+      link="w1" />
+    <child
+      link="w2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="w3">
+    <inertial>
+      <origin
+        xyz="-0.00263004201038285 0.00380034368789142 0.000601469612295007"
+        rpy="0 0 0" />
+      <mass
+        value="9.30864008348842E-05" />
+      <inertia
+        ixx="1.18672980323084E-09"
+        ixy="-2.57152892983099E-14"
+        ixz="1.7199756539844E-14"
+        iyy="2.89549181898131E-10"
+        iyz="-1.15651448888996E-10"
+        izz="1.18716821450343E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/w3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/w3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jw3"
+    type="continuous">
+    <origin
+      xyz="0.000347244107506806 0.0188062198406883 3.84373911390019E-05"
+      rpy="2.80608728098415 -3.80707150502976E-16 -3.14159265358979" />
+    <parent
+      link="w2" />
+    <child
+      link="w3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="x1">
+    <inertial>
+      <origin
+        xyz="0.00297719913157596 0.00811843474800698 -0.000587272428575425"
+        rpy="0 0 0" />
+      <mass
+        value="0.000228155215261747" />
+      <inertia
+        ixx="8.67739432484198E-09"
+        ixy="-1.25220281614738E-14"
+        ixz="-6.91300756121795E-15"
+        iyy="1.12691934015555E-09"
+        iyz="1.59912781953615E-10"
+        izz="8.65076676399291E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/x1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/x1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jx1"
+    type="continuous">
+    <origin
+      xyz="0.0139728068120819 0.0367202474064486 0.00298392986917286"
+      rpy="0.29656837593659 -4.18431123848793E-17 9.59049265598604E-18" />
+    <parent
+      link="hands" />
+    <child
+      link="x1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="x2">
+    <inertial>
+      <origin
+        xyz="0.0029771912019035 0.00673508368380906 -0.000548942260001257"
+        rpy="0 0 0" />
+      <mass
+        value="0.000168899784139282" />
+      <inertia
+        ixx="4.66365445871819E-09"
+        ixy="-1.26521095497523E-15"
+        ixz="-1.76140383365743E-16"
+        iyy="5.58087152238606E-10"
+        iyz="8.52710203503964E-11"
+        izz="4.6384985735893E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/x2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/x2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jx2"
+    type="continuous">
+    <origin
+      xyz="0 0.0188062198406883 3.8437391138962E-05"
+      rpy="0.173431026505967 -1.6951359103647E-17 -4.64213102513351E-17" />
+    <parent
+      link="x1" />
+    <child
+      link="x2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="x3">
+    <inertial>
+      <origin
+        xyz="-0.00233783135577613 0.0036206567537094 0.000591494974870103"
+        rpy="0 0 0" />
+      <mass
+        value="6.2567903955084E-05" />
+      <inertia
+        ixx="6.05381627907182E-10"
+        ixy="-9.55016752978575E-15"
+        ixz="1.28332981384005E-14"
+        iyy="1.55246239510321E-10"
+        iyz="-5.79126249590553E-11"
+        izz="6.10158603614631E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/x3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://handbase/meshes/x3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jx3"
+    type="continuous">
+    <origin
+      xyz="0.000639460671996946 0.0160228511028668 0"
+      rpy="2.9507376171861 -3.14252618799167E-16 -3.14159265358979" />
+    <parent
+      link="x2" />
+    <child
+      link="x3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+ <transmission name="tran0">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jm1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor0">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jm2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="js1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="js2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+<transmission name="tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="js3">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+<transmission name="tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jz1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jz2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jz3">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor7">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jw1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor8">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+<transmission name="tran9">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jw2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor9">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+<transmission name="tran10">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jw3">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor10">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran11">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jx1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor11">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="tran12">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jx2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor12">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+<transmission name="tran13">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="jx3">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor13">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+   <gazebo>
+    <plugin name="control" filename="libgazebo_ros_control.so"/>
+  </gazebo>
+</robot>

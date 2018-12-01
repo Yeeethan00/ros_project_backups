@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/mybot_ws/devel
+
+Name: my_actuator
+Description: Description of my_actuator
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mypc/ROSex/mybot_ws/devel/lib 
+Requires: geometry_msgs rospy std_msgs message_runtime actionlib_msgs

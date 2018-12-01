@@ -1,0 +1,8 @@
+prefix=/home/mypc/ROSex/chessbot/install
+
+Name: gazebo_gripper
+Description: Description of gazebo_gripper
+Version: 0.5.3
+Cflags: -I/home/mypc/ROSex/chessbot/install/include
+Libs: -L/home/mypc/ROSex/chessbot/install/lib 
+Requires: 

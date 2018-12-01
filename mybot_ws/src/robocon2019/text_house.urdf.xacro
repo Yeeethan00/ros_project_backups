@@ -1,0 +1,952 @@
+<?xml version="1.0"?>
+<robot name="MR2">
+    <link name="trunk_front">
+	<collision>
+            <geometry>
+                <box size="0.4 0.2 0.2"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0.2 0. 0.45"/>
+        </collision>
+        <visual>
+            <geometry>
+                <box size="0.4 0.2 0.2"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0.2 0. 0.45"/>
+        </visual>
+	<inertial>
+      	    <mass value="0.1" />
+            <inertia ixx="0.0067" ixy="0" ixz="0.0"
+        	iyy="0.016" iyz="0.0"
+        	izz="0.016" />
+    	</inertial>
+    </link>
+
+    <link name="trunk_back">
+	<collision>
+      	    <geometry>
+                <box size="0.4 0.2 0.2"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="-0.2 0. 0."/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.4 0.2 0.2"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="-0.2 0. 0."/>
+        </visual>
+	<inertial>
+      	    <mass value=".1" />
+            <inertia ixx="0.0067" ixy="0" ixz="0.0"
+        	iyy="0.016" iyz="0.0"
+        	izz="0.016" />
+    	</inertial>
+    </link>
+    <joint name = "waist" type = "continuous">
+        <axis xyz = "0 0 1"/>
+        <parent link = "trunk_front"/>
+        <child link = "trunk_back"/>
+        <origin rpy = "0 0 0" xyz = "0 0 0.45"/>
+    </joint>
+
+    <link name="left_front_shoulder">
+	<collision>
+      	    <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.05 0."/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.05 0."/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0016" ixy="0" ixz="0.0"
+        	iyy="0.0016" iyz="0.0"
+        	izz="0.0016" />
+    	</inertial>
+    </link>
+    <joint name = "left_front_shoulder_joint" type = "continuous">
+        <axis xyz = "1 0 0"/>
+        <parent link = "trunk_front"/>
+        <child link = "left_front_shoulder"/>
+        <origin rpy = "0 0 0" xyz = "0.3 0.1 0.45"/>
+    </joint>
+
+    <link name="left_front_3">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.0 -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0021" ixy="0" ixz="0.0"
+        	iyy="0.0021" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "left_front_3_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "left_front_shoulder"/>
+        <child link = "left_front_3"/>
+        <origin rpy = "0 0 0" xyz = "0. 0.1 0."/>
+    </joint>
+
+    <link name="left_front_2">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.00354" ixy="0" ixz="0.0"
+        	iyy="0.00354" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "left_front_2_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "left_front_3"/>
+        <child link = "left_front_2"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+
+    <link name="left_front_1">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+        </visual>
+	<inertial>
+      	    <mass value="10." />
+            <inertia ixx="0.0104" ixy="0" ixz="0.0"
+        	iyy="0.0104" iyz="0.0"
+        	izz="0.00417" />
+    	</inertial>
+	<surface>
+	<friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </link>
+    <joint name = "left_front_1_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "left_front_2"/>
+        <child link = "left_front_1"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+   
+
+    <link name="right_front_shoulder">
+	<collision>
+      	    <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. -0.05 0."/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. -0.05 0."/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0016" ixy="0" ixz="0.0"
+        	iyy="0.0016" iyz="0.0"
+        	izz="0.0016" />
+    	</inertial>
+    </link>
+    <joint name = "right_front_shoulder_joint" type = "continuous">
+        <axis xyz = "1 0 0"/>
+        <parent link = "trunk_front"/>
+        <child link = "right_front_shoulder"/>
+        <origin rpy = "0 0 0" xyz = "0.3 -0.1 0.45"/>
+    </joint>
+
+    <link name="right_front_3">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.0 -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0021" ixy="0" ixz="0.0"
+        	iyy="0.0021" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "right_front_3_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "right_front_shoulder"/>
+        <child link = "right_front_3"/>
+        <origin rpy = "0 0 0" xyz = "0. -0.1 0."/>
+    </joint>
+
+    <link name="right_front_2">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.00354" ixy="0" ixz="0.0"
+        	iyy="0.00354" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "right_front_2_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "right_front_3"/>
+        <child link = "right_front_2"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+
+    <link name="right_front_1">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+        </visual>
+	<inertial>
+      	    <mass value="10." />
+            <inertia ixx="0.00104" ixy="0" ixz="0.0"
+        	iyy="0.0104" iyz="0.0"
+        	izz="0.00417" />
+    	</inertial>
+	<surface>
+	<friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </link>
+    <joint name = "right_front_1_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "right_front_2"/>
+        <child link = "right_front_1"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+
+
+   <link name="left_back_shoulder">
+	<collision>
+      	    <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.05 0."/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.05 0."/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0016" ixy="0" ixz="0.0"
+        	iyy="0.0016" iyz="0.0"
+        	izz="0.0016" />
+    	</inertial>
+    </link>
+    <joint name = "left_back_shoulder_joint" type = "continuous">
+        <axis xyz = "1 0 0"/>
+        <parent link = "trunk_back"/>
+        <child link = "left_back_shoulder"/>
+        <origin rpy = "0 0 0" xyz = "-0.3 0.1 0."/>
+    </joint>
+
+    <link name="left_back_3">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.0 -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0021" ixy="0" ixz="0.0"
+        	iyy="0.0021" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "left_back_3_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "left_back_shoulder"/>
+        <child link = "left_back_3"/>
+        <origin rpy = "0 0 0" xyz = "0. 0.1 0."/>
+    </joint>
+
+    <link name="left_back_2">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.00354" ixy="0" ixz="0.0"
+        	iyy="0.00354" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "left_back_2_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "left_back_3"/>
+        <child link = "left_back_2"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+
+    <link name="left_back_1">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+        </visual>
+	<inertial>
+      	    <mass value="10." />
+            <inertia ixx="0.0104" ixy="0" ixz="0.0"
+        	iyy="0.0104" iyz="0.0"
+        	izz="0.00417" />
+    	</inertial>
+	<surface>
+	<friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </link>
+    <joint name = "left_back_1_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "left_back_2"/>
+        <child link = "left_back_1"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+
+
+   <link name="right_back_shoulder">
+	<collision>
+      	    <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. -0.05 0."/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. -0.05 0."/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0016" ixy="0" ixz="0.0"
+        	iyy="0.0016" iyz="0.0"
+        	izz="0.0016" />
+    	</inertial>
+    </link>
+    <joint name = "right_back_shoulder_joint" type = "continuous">
+        <axis xyz = "1 0 0"/>
+        <parent link = "trunk_back"/>
+        <child link = "right_back_shoulder"/>
+        <origin rpy = "0 0 0" xyz = "-0.3 -0.1 0."/>
+    </joint>
+
+    <link name="right_back_3">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0.0 -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0021" ixy="0" ixz="0.0"
+        	iyy="0.0021" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "right_back_3_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "right_back_shoulder"/>
+        <child link = "right_back_3"/>
+        <origin rpy = "0 0 0" xyz = "0. -0.1 0."/>
+    </joint>
+
+    <link name="right_back_2">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.28"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.14"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.00354" ixy="0" ixz="0.0"
+        	iyy="0.00354" iyz="0.0"
+        	izz="0.000417" />
+    	</inertial>
+    </link>
+    <joint name = "right_back_2_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "right_back_3"/>
+        <child link = "right_back_2"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+
+    <link name="right_back_1">
+	<collision>
+      	    <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0. -0.05"/>
+        </visual>
+	<inertial>
+      	    <mass value="10." />
+            <inertia ixx="0.0104" ixy="0" ixz="0.0"
+        	iyy="0.0104" iyz="0.0"
+        	izz="0.00417" />
+    	</inertial>
+	<surface>
+        <friction>
+          <ode>
+            <mu>1</mu>
+            <mu2>1</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </link>
+    <joint name = "right_back_1_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "right_back_2"/>
+        <child link = "right_back_1"/>
+        <origin rpy = "0 0 0" xyz = "0. 0. -0.28"/>
+    </joint>
+
+    <link name="hokuyo_link">
+	<collision>
+      	    <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0 0.05"/>
+    	</collision>
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0. 0 0.05"/>
+        </visual>
+	<inertial>
+      	    <mass value="1." />
+            <inertia ixx="0.0016" ixy="0" ixz="0.0"
+        	iyy="0.0016" iyz="0.0"
+        	izz="0.0016" />
+    	</inertial>
+    </link>
+    <joint name = "hokuyo_joint" type = "fixed">
+        <axis xyz = "0 1 0"/>
+        <parent link = "trunk_front"/>
+        <child link = "hokuyo_link"/>
+        <origin rpy = "0 0 0" xyz = "0 0 0.551"/>
+    </joint>
+    
+    <!-- root link, on the ground just below the model origin -->
+   <link name="base_footprint">
+    <visual>
+       <origin xyz="0 0 0" rpy="0 0 0" />
+       <geometry>
+         <box size="0.001 0.001 0.001" />
+       </geometry>
+     </visual>
+   </link>
+   <joint name="base_link_joint" type="fixed">
+     <origin xyz="0.0 0 0.002" rpy="0 0 0" />
+     <parent link="base_footprint"/>
+     <child link="trunk_front" />
+   </joint>
+   <gazebo>
+    <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>horse_cmd_vel</commandTopic>
+      <odometryTopic>MR2_odom</odometryTopic>
+      <odometryFrame>MR2_odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+    </plugin>
+  </gazebo>
+    <transmission name="tran_waist">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="waist">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_waist">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_left_front_shoulder_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_front_shoulder_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_front_shoulder_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_left_front_3_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_front_3_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_front_3_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_left_front_2_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_front_2_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_front_2_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_left_front_1_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_front_1_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_front_1_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_right_front_shoulder_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_front_shoulder_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_front_shoulder_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_right_front_3_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_front_3_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_front_3_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_right_front_2_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_front_2_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_front_2_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_right_front_1_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_front_1_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_front_1_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+     <transmission name="tran_left_back_shoulder_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_back_shoulder_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_back_shoulder_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_left_back_3_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_back_3_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_back_3_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_left_back_2_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_back_2_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_back_2_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_left_back_1_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="left_back_1_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_left_back_1_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_right_back_shoulder_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_back_shoulder_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_back_shoulder_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_right_back_3_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_back_3_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_back_3_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <transmission name="tran_right_back_2_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_back_2_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_back_2_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+
+    <transmission name="tran_right_back_1_joint">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="right_back_1_joint">
+      		<hardwareInterface>PositionJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="motor_right_back_1_joint">
+      	<hardwareInterface>PositionJointInterface</hardwareInterface>
+      	<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
+
+    <gazebo reference="left_front_1">
+    	<mu1>1</mu1>
+    	<mu2>1</mu2>
+    </gazebo>
+    <gazebo reference="right_front_1">
+    	<mu1>1</mu1>
+    	<mu2>1</mu2>
+    </gazebo>
+    <gazebo reference="left_back_1">
+    	<mu1>1</mu1>
+    	<mu2>1</mu2>
+    </gazebo>
+    <gazebo reference="right_back_1">
+    	<mu1>1</mu1>
+    	<mu2>1</mu2>
+    </gazebo>
+
+    <gazebo>
+    	<plugin name="control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
+    
+        <gazebo reference="hokuyo_link">
+
+        <sensor type="ray" name="hokuyo_sensor">
+
+          <pose>0 0 0 0 0 0</pose>
+
+          <visualize>false</visualize>
+
+          <update_rate>40</update_rate>
+
+          <ray>
+
+            <scan>
+
+              <horizontal>
+
+                <samples>720</samples>
+
+                <resolution>1</resolution>
+
+                <min_angle>-3.14156926</min_angle>
+
+                <max_angle>3.14156926</max_angle>
+
+              </horizontal>
+
+            </scan>
+
+            <range>
+
+              <min>0.10</min>
+
+              <max>30.0</max>
+
+              <resolution>0.01</resolution>
+
+            </range>
+
+            <noise>
+
+              <type>gaussian</type>
+
+              <mean>0.0</mean>
+
+              <stddev>0.01</stddev>
+
+            </noise>
+
+          </ray>
+
+          <plugin name="hokuyo_controller" filename="libgazebo_ros_laser.so">
+
+            <topicName>/scan</topicName>
+
+            <frameName>hokuyo_link</frameName>
+
+          </plugin>
+
+        </sensor>
+
+      </gazebo>
+</robot>

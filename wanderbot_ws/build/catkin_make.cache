@@ -1,0 +1,2 @@
+navigation:opencvfollowbot:smachsimple:teleopbot:wanderbot
+-DCATKIN_DEVEL_PREFIX=/home/mypc/ROSex/wanderbot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mypc/ROSex/wanderbot_ws/install -G Unix Makefiles

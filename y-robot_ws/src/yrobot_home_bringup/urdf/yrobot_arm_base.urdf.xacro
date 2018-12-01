@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<robot name="arm">
+    <link name="world"/>
+    <link name="arm_base_link">
+        <visual>
+            <geometry>
+                <box size="0.085 0.085 0.21"/>
+            </geometry>
+            <material name="sliver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0 0 0.105"/>
+        </visual>
+    </link>
+    <joint name = "fixed" type = "fixed">
+        <parent link="world"/>
+        <child link="arm_base_link"/>
+    </joint>
+    <link name = "shouder_arm">
+        <visual>
+            <geometry>
+                <box size = "0.04 0.04 0.035"/>
+            </geometry>
+            <material name = "silver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0 0 0.0175"/>
+        </visual>
+    </link>
+    <joint name = "shouder_arm_joint" type = "continuous">
+        <axis xyz = "0 0 1"/>
+        <parent link = "arm_base_link"/>
+        <child link = "shouder_arm"/>
+        <origin rpy = "0 0 0" xyz = "0 0 0.21"/>
+    </joint>
+    <link name = "upper_arm">
+        <visual>
+            <geometry>
+                <box size = "0.06 0.025 0.11"/>
+            </geometry>
+            <material name = "sliver"/>
+            <origin rpy = "0.785 0 0" xyz = "0 -0.030 0.048"/>
+        </visual>
+    </link>
+    <joint name = "upper_arm_joint" type = "continuous">
+        <axis xyz = "1 0 0"/>
+        <parent link = "shouder_arm"/>
+        <child link = "upper_arm"/>
+        <calibration rising="0.0"/>
+        <origin rpy = "0 0 0" xyz = "0 0 0.035"/>
+        <limit effort="30" velocity="1.0" lower="-0.7" upper="0.7" /> 
+    </joint>
+    <link name = "middle_arm">
+        <visual>
+            <geometry>
+                <cylinder length = "0.15" radius = "0.025"/>
+            </geometry>
+            <material name = "sliver"/>
+            <origin rpy = "0 0 0" xyz = "0 0 0.075"/>
+        </visual>
+    </link>
+    <joint name = "middle_arm_joint" type = "continuous">
+        <axis xyz = "1 0 0"/>
+        <parent link = "upper_arm"/>
+        <child link = "middle_arm"/>
+        <origin rpy = "2.355 0 0" xyz = "0 -0.077 0.087"/>
+    </joint>
+    <link name = "fore_arm">
+        <visual>
+            <geometry>
+                <box size = "0.055 0.025 0.08"/>
+            </geometry>
+            <material name = "sliver"/>
+            <origin rpy = "0 0 0" xyz = "0 0 0.04"/>
+        </visual>
+    </link>
+    <joint name = "fore_arm_joint" type = "continuous">
+        <axis xyz = "1 0 0"/>
+        <parent link = "middle_arm"/>
+        <child link = "fore_arm"/>
+        <origin rpy = "-0.785 0 0" xyz = "0 0 0.15"/>
+    </joint>
+    <link name = "tool">
+        <visual>
+            <geometry>
+                <cylinder length = "0.01" radius = "0.02"/>
+            </geometry>
+            <material name = "sliver"/>
+            <origin rpy = "1.57 0 0" xyz = "0 0.005 0"/>
+        </visual>
+    </link>
+    <joint name = "tool_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "fore_arm"/>
+        <child link = "tool"/>
+        <origin rpy = "1.57 0 0" xyz = "0 0 0.08"/>
+    </joint>
+    <link name = "finger_1">
+        <visual>
+            <geometry>
+                <cylinder length = "0.06" radius = "0.003"/>
+            </geometry>
+            <material name = "sliver"/>
+            <origin rpy =  "0 0 0" xyz = "0 0 0.04"/>
+        </visual>
+    </link>
+    <joint name = "finger_1_joint" type = "continuous">
+        <axis xyz = "0 1 0"/>
+        <parent link = "tool"/>
+        <child link = "finger_1"/>
+        <origin rpy = "-1.57 0 0" xyz = "0 0 0"/>
+    </joint>
+</robot>

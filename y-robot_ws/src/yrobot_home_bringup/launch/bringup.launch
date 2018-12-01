@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen">
+        <param name="port" value="/dev/ttyUSB0"/>
+	<param name="baud" value="57600"/>
+    </node>
+    <!--node pkg="yrobot_home_bringup" type="yrobot_teleop_key.py" name="yrobot_teleop_key" output="screen"/-->
+    <node pkg="yrobot_home_bringup" type="odom_publisher.py" name="obom_publisher" output="screen"/>
+</launch>

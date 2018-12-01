@@ -1,0 +1,69 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "C"
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/gauss_pyramid.c" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/gauss_pyramid.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_C
+  "ROS_BUILD_SHARED_LIBS=1"
+  )
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/eigen3"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/."
+  )
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/depth_image.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/depth_image.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/fast.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/fast.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/feature_matcher.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/feature_matcher.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/frame.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/frame.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/grid_filter.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/grid_filter.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/initial_homography_estimation.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/initial_homography_estimation.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/intensity_descriptor.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/intensity_descriptor.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/internal_utils.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/internal_utils.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/motion_estimation.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/motion_estimation.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/normalize_image.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/normalize_image.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/primesense_depth.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/primesense_depth.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/pyramid_level.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/pyramid_level.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/rectification.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/rectification.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/refine_feature_match.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/refine_feature_match.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/refine_motion_estimate.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/refine_motion_estimate.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/stereo_calibration.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/stereo_calibration.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/stereo_depth.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/stereo_depth.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/stereo_frame.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/stereo_frame.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/stereo_rectify.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/stereo_rectify.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/tictoc.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/tictoc.cpp.o"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/libfovis/libfovis/visual_odometry.cpp" "/home/mypc/ROSex/y-robot_ws/build/libfovis/CMakeFiles/fovis.dir/libfovis/libfovis/visual_odometry.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ROS_BUILD_SHARED_LIBS=1"
+  )
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/eigen3"
+  "/home/mypc/ROSex/y-robot_ws/src/libfovis/."
+  )
+
+# Pairs of files generated by the same build rule.
+set(CMAKE_MULTIPLE_OUTPUT_PAIRS
+  "/home/mypc/ROSex/y-robot_ws/devel/lib/libfovis.so" "/home/mypc/ROSex/y-robot_ws/devel/lib/libfovis.so.1"
+  )
+
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

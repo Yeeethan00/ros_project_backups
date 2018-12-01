@@ -1,0 +1,34 @@
+yrobot_home_bringup:
+	bringup.launch   #串口节点启动，odom节点启动
+	(yrobot.rviz  yrobot_rviz.launch  #仿真)
+	yrobot_world.launch  #仿真节点启动（不能与bringup.launch同时启动）
+	(yrobot_move_base.launch  #move_base节点（无map，无法启动）)
+	yrobot_move_base_blank_map.launch  #启动move_base节点，必须有map
+	yrobot_arm_moveit_bringup.launch  #机械臂节点启动
+	yrobot_arm_base.launch  #启动机械臂仿真 （不能与yrobot_arm_moveit_bringup.launch同时启动）
+	yrobot_arbotix.launch  #启动机械臂arbotix（组要修改）
+
+yrobot_drivers_bringup:
+	freenect_stack  #kinect v1驱动
+	rgbdslam_v2-kinetic #视觉slam包
+	rosserial  #串口驱动
+	yrobot_moveit_config  #机械臂驱动
+	
+yrobot_apps:
+	#move_base移动#
+	yrobot_teleop_key.py  #键盘移动
+	move_base_square.py  #移动正方形
+	move_base_straight.py  #移动直线
+	#arm Moveit!#
+	get_arm_pose.py  #获取当前机械臂状态
+	trajetory_demo.py  #trajetory客户端
+	moveit_fk_demo.py  #正向运动学
+	moveit_ik_demo.py  #逆向运动学
+	#摄像头#
+	(good_features.py  lk_tracker.py  ros2opencv2.py  face_detector.py  face_tracker.py  face_tracker2.py  object_follower.py#功能节点)
+	face_detector.launch  #面部识别
+	face_tracker.launch   #面部识别优化
+	face_tracker2.launch   #面部识别优化2
+	object_follower.launch  #人脸跟随
+	
+	
